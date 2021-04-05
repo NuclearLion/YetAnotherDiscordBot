@@ -16,7 +16,7 @@ for (const file of commandFiles) {
 
 
 client.once('ready', () => {
-    console.log('Codelyon is online!');
+    console.log('Str3su is online!');
 });
 
 client.on('message', message => {
@@ -27,7 +27,8 @@ client.on('message', message => {
 
     if (command === 'ping') {
         client.commands.get('ping').execute(message, args);
-    }
+    } else if (command === 'youtube')
+        client.commands.get('youtube').execute(message, args);
 });
 
-client.login('   ');
+client.login('ODI4Njg2MTYwMjg5MjAyMTg3.YGtMIA.F94bhMRvbQtZW0G3yB-QUZupq84');
