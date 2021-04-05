@@ -31,4 +31,11 @@ client.on('message', message => {
         client.commands.get('youtube').execute(message, args);
 });
 
-client.login('ODI4Njg2MTYwMjg5MjAyMTg3.YGtMIA.F94bhMRvbQtZW0G3yB-QUZupq84');
+client.on('guildMemberAdd', member => {
+    const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
+    if(!channel) return;
+
+    channel.send('Welcome to the server, ${member}');
+});
+
+client.login(' ');
